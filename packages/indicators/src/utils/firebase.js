@@ -16,7 +16,7 @@ const {
   REACT_APP_STORAGE_BUCKET: storageBucket,
   REACT_APP_SENDER_ID: messagingSenderId,
   REACT_APP_APP_ID: appId,
-} = process.env;
+} = import.meta.env;
 
 const config = {
   apiKey,

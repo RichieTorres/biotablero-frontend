@@ -65,7 +65,7 @@ class GeoServerAPI {
    * Request the base layer 'Regiones_geb'
    */
   static getRequestURL() {
-    return `${process.env.REACT_APP_GEOSERVER_URL}`;
+    return `${import.meta.env.VITE_GEOSERVER_URL}`;
   }
 
   /**

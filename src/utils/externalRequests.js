@@ -9,7 +9,7 @@ class ExternalRequests {
    * @return {Promise<Array>} Array of objects with feature flags
    */
   static requestFeaturesFlags() {
-    const objectId = `https://biotablero.s3.amazonaws.com/featureFlags_${process.env.REACT_APP_ENVIRONMENT}.json`;
+    const objectId = `https://biotablero.s3.amazonaws.com/featureFlags_${import.meta.env.VITE_ENVIRONMENT}.json`;
     return ExternalRequests.makeGetRequest(objectId);
   }
 

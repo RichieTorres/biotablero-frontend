@@ -81,7 +81,7 @@ class biabAPI {
       ...options,
     };
     return axios
-      .get(`${process.env.REACT_APP_BACKEND_BIAB_URL}/${endpoint}`, config)
+      .get(`${import.meta.env.VITE_BACKEND_BIAB_URL}/${endpoint}`, config)
       .then((res) => {
         if (completeRes) {
           return res;
@@ -114,7 +114,7 @@ class biabAPI {
     };
     return axios
       .post(
-        `${process.env.REACT_APP_BACKEND_BIAB_URL}/${endpoint}`,
+        `${import.meta.env.VITE_BACKEND_BIAB_URL}/${endpoint}`,
         requestBody,
         config
       )
